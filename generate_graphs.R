@@ -1,0 +1,5 @@
+data = read.csv("data/Twist4.csv",header=FALSE)
+gyro_data = data.frame(data$V4, data$V5,data$V6)
+acc_data = data.frame(data$V1, data$V2,data$V3)
+a = scatterplot3d(gyro_data$data.V4, gyro_data$data.V5, gyro_data$data.V6, xlab = "x", ylab="y", zlab="z",pch=16, highlight.3d = TRUE)
+g = scatterplot3d(acc_data$data.V1, acc_data$data.V2, acc_data$data.V3, xlab = "x", ylab="y", zlab="z",pch=16, highlight.3d = TRUE)
